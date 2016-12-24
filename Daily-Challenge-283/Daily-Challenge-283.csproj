@@ -7,7 +7,7 @@
     <ProjectGuid>{78710AA5-961D-4339-B7AC-0F03AA5E9BF4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <RootNamespace>DailyChallenge283</RootNamespace>
     <AssemblyName>Daily-Challenge-283</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
