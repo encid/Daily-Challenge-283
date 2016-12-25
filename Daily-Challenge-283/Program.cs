@@ -35,9 +35,9 @@ namespace DailyChallenge283
             var reg = new Regex("[^a-zA-Z?]");
             var first = reg.Replace(words[0].ToLower(), "");
             var second = reg.Replace(words[1].ToLower(), "");
-            var temp = "";
 
             // Start checking letters
+            var temp = "";
             for (int i = 0; i < second.Length; i++)
             {
                 if (first.Contains(second[i]))
