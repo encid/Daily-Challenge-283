@@ -24,8 +24,7 @@ namespace DailyChallenge283
         static string Check(string input)
         {
             // Split the input string
-            char[] delimiter = { '?' };            
-            var words = input.Split(delimiter);
+            var words = input.Split(new char[] { '?' });
 
             // Preserve both parts of input string in two variables
             var f = words[0].Substring(0, words[0].Length - 1);
@@ -50,11 +49,11 @@ namespace DailyChallenge283
             // If all letters are used AND there are no letters remaining, it's an anagram
             if (temp == second && first == "")
             {
-                return string.Format("'{0}' is an anagram of '{1}'", f, s);
+                return $"'{f}' is an anagram of '{s}'";
             }
 
             // Not an anagram
-            return string.Format("'{0}' is NOT an anagram of '{1}'", f, s);
+            return $"'{f}' is NOT an anagram of '{s}'";
         }
 
         static string Trim(string letters, char letter)
