@@ -17,6 +17,7 @@ namespace DailyChallenge283
             Console.WriteLine(Check("Astronomers ? Moon starer"));
             Console.WriteLine(Check("Vacation Times ? I'm Not as Active"));
             Console.WriteLine(Check("Dormitory ? Dirty Rooms"));
+            Console.WriteLine(Check("hh ? h"));
 
             Console.ReadLine();
         }
@@ -31,7 +32,7 @@ namespace DailyChallenge283
             var s = words[1].Substring(1);
 
             // Remove non-alphabetical characters
-            var reg = new Regex("[^a-zA-Z?]");
+            var reg = new Regex("[^a-z?]");
             var first = reg.Replace(words[0].ToLower(), "");
             var second = reg.Replace(words[1].ToLower(), "");
 
@@ -42,7 +43,7 @@ namespace DailyChallenge283
                 if (first.Contains(second[i]))
                 {
                     temp += second[i];
-                    first = Trim(first, second[i]);
+                    first = RemoveChars(first, second[i]);
                 }
             }
 
@@ -56,7 +57,7 @@ namespace DailyChallenge283
             return $"'{f}' is NOT an anagram of '{s}'";
         }
 
-        static string Trim(string letters, char letter)
+        static string RemoveChars(string letters, char letter)
         {
             string temp = "";
 
@@ -69,11 +70,11 @@ namespace DailyChallenge283
                 }
             }
 
-            if (temp != letters)
-            {
-                return temp;
-            }
-            return letters;
+            //if (temp != letters)
+            //{
+            //    return temp;
+            //}
+            return temp;
         }
     }
 }
