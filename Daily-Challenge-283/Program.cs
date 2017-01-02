@@ -43,7 +43,7 @@ namespace DailyChallenge283
                 if (first.Contains(second[i]))
                 {
                     temp += second[i];
-                    first = RemoveChars(first, second[i]);
+                    first = first.Remove(first.IndexOf(second[i]), 1);
                 }
             }
 
@@ -55,26 +55,6 @@ namespace DailyChallenge283
 
             // Not an anagram
             return $"'{f}' is NOT an anagram of '{s}'";
-        }
-
-        static string RemoveChars(string letters, char letter)
-        {
-            string temp = "";
-
-            for (int i = 0; i < letters.Length; i++)
-            {
-                if (letters.IndexOf(letter) != -1)
-                {
-                    temp = letters.Remove(letters.IndexOf(letter), 1);
-                    break;
-                }
-            }
-
-            //if (temp != letters)
-            //{
-            //    return temp;
-            //}
-            return temp;
         }
     }
 }
